@@ -1,10 +1,9 @@
 let btn = document.getElementById("payButton")
 //let language = navigator.language //or fix
 let language = "ru-RU"
+var amount = window.location.search.slice(1).split('=')[1]
 
-function pay() {
-  console.log(window.location.search.slice(1).split('=')[1])
-  const amount = window.location.search.slice(1).split('=')[1]
+function pay() {  
   var widget = new cp.CloudPayments({
     language: language
   })
